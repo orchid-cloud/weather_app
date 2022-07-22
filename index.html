@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="header">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Weather forecast</h5>
+            <h6 class="card-subtitle mb-2 text-muted" id="current-day">
+              17 June 2022
+            </h6>
+            <p class="card-text" id="city-name">City</p>
+            <div class="temperature-box">
+              <p class="temperature" id="temperature">t</p>
+              <p class="units" id="units">
+                <a href="#" id="celcius-link">°C</a>
+                <a href="#" id="fahrenheit-link">°F</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="header__img">
+          <img src="./images/Sun-And-Cloud-PNG-HD.png" alt="sun with clouds" />
+        </div>
+        <div class="details">
+          <p>Feels like: <span id="feels-like"></span>°C</p>
+          <p>Humidity: <span id="humidity"></span>%</p>
+          <p>Wind: <span id="wind-speed"></span>km/h</p>
+        </div>
+      </section>
+      <form class="input" id="form">
+        <input
+          class="input-city"
+          type="text"
+          id="input-city-search"
+          autocomplete="off"
+          placeholder="Enter your city"
+        />
+        <button type="submit" class="btn btn-primary submit_btn">Search</button>
+        <button
+          type="button"
+          class="btn btn-success"
+          id="current-location-weather"
+        >
+          Current
+        </button>
+      </form>
+      <section class="footer">
+        <div class="flex">
+          <div class="card col-2">
+            <div class="card-body">
+              <h5 class="card-title">SUT</h5>
+              <h6 class="card-subtitle mb-2 text-muted">17°...29°</h6>
+              <img class="days-img" src="./images/sunny.png" alt="sun" />
+              <p>sunny</p>
+            </div>
+          </div>
+          <div class="card col-2">
+            <div class="card-body">
+              <h5 class="card-title">SUN</h5>
+              <h6 class="card-subtitle mb-2 text-muted">14°...22°</h6>
+              <img class="days-img" src="./images/rain.png" alt="rain" />
+              <p>rainy</p>
+            </div>
+          </div>
+          <div class="card col-2">
+            <div class="card-body">
+              <h5 class="card-title">MON</h5>
+              <h6 class="card-subtitle mb-2 text-muted">13°...17°</h6>
+              <img
+                class="days-img"
+                src="./images/sun with clouds.png"
+                alt="sun and clouds"
+              />
+              <p>cloudy</p>
+            </div>
+          </div>
+          <div class="card col-2">
+            <div class="card-body">
+              <h5 class="card-title">TUE</h5>
+              <h6 class="card-subtitle mb-2 text-muted">12°...21°</h6>
+              <img
+                class="days-img"
+                src="./images/sun with clouds.png"
+                alt="sun and clouds"
+              />
+              <p>cloudy</p>
+            </div>
+          </div>
+          <div class="card col-2">
+            <div class="card-body">
+              <h5 class="card-title">WED</h5>
+              <h6 class="card-subtitle mb-2 text-muted">14°...19°</h6>
+              <img class="days-img" src="./images/rain.png" alt="rain" />
+              <p>rainy</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <a
+        class="footer__link"
+        href="https://github.com/orchid-cloud/shecodes_project.git"
+        target="blank"
+        >Open code-source</a
+      >
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

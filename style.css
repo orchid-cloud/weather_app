@@ -1,0 +1,84 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #f5f9ee;
+  margin-top: 50px;
+  padding: 40px 20px;
+  border: 1px solid #aeccc6;
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.card-text {
+  font-size: 24px;
+}
+
+.temperature-box {
+  display: flex;
+}
+
+.temperature {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.units {
+  padding-top: 10px;
+}
+
+#celcius-link {
+  margin-right: 15px;
+}
+
+.units a {
+  text-decoration: none;
+  color: rgb(0, 174, 255);
+}
+
+.header__img img {
+  max-width: 200px;
+}
+
+.details {
+  align-self: center;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.input-city {
+  margin-right: 10px;
+}
+
+.submit_btn {
+  margin-right: 15px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.card.col-2 {
+  margin: 0 15px;
+  text-align: center;
+}
+
+.days-img {
+  width: 70px;
+}
+
+.footer__link {
+  margin-left: 60px;
+}
