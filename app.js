@@ -37,18 +37,25 @@ function capitalizeFirstLetter(string) {
 function showTemperature(result) {
   console.log(result.data);
   let city = document.querySelector("#city-name");
+  let condition = document.querySelector("description");
   let temperature = Math.round(result.data.main.temp);
   let currentTemp = document.querySelector("#temperature");
   let feelsLike = document.querySelector("#feels-like");
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
+  let iconElement = document.querySelector("#icon");
 
   city.innerHTML = result.data.name;
+  description.innerHTML = result.data.weather[0].description;
   currentTemp.innerHTML = `${temperature}`;
   feelsLike.innerHTML = Math.round(result.data.main.feels_like);
   humidity.innerHTML = result.data.main.humidity;
   windSpeed.innerHTML = Math.round(result.data.wind.speed);
-
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", result.data.weather[0].description);
 }
 
 function getWeatherByCityName(cityName, callback) {

@@ -12,7 +12,7 @@ html {
   max-width: 700px;
   margin: 50px auto;
   margin-bottom: 10px;
-  background: #f5f9ee;
+  background: #fff;
   /* margin-top: 50px; */
   padding: 40px 20px;
   border: 1px solid #aeccc6;
@@ -26,7 +26,7 @@ html {
 }
 
 .card-text {
-  font-size: 24px;
+  font-size: 36px;
 }
 
 .temperature-box {
@@ -52,11 +52,12 @@ html {
 }
 
 .header__img img {
-  max-width: 200px;
+  padding: 0 50px;
 }
 
 .details {
   align-self: center;
+  min-width: 150px;
 }
 
 .input {
@@ -76,12 +77,4 @@ html {
 .flex {
   display: flex;
   justify-content: center;
-}
-
-.card.col-2 {
-  margin: 0 15px;
-  text-align: center;
-}
-
-.footer__link {
 }
