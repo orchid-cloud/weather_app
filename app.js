@@ -44,9 +44,10 @@ function showTemperature(result) {
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
   let iconElement = document.querySelector("#icon");
+  celsiusTemperature = result.data.main.temp;
 
   city.innerHTML = result.data.name;
-  description.innerHTML = result.data.weather[0].description;
+  // condition.innerHTML = result.data.weather[0].description;
   currentTemp.innerHTML = `${temperature}`;
   feelsLike.innerHTML = Math.round(result.data.main.feels_like);
   humidity.innerHTML = result.data.main.humidity;
@@ -57,6 +58,7 @@ function showTemperature(result) {
   );
   iconElement.setAttribute("alt", result.data.weather[0].description);
 }
+let celsiusTemperature = null;
 
 function getWeatherByCityName(cityName, callback) {
   let apiKey = "ad08724a8362612bf966360e7b25eb54";
@@ -85,21 +87,26 @@ function search(event) {
 let form = document.querySelector("#form");
 form.addEventListener("submit", search);
 
-function calcTemperature(event) {
+function calcTemperatureCels(event) {
   event.preventDefault();
 
+  fahrenheitTemperature.classList.remove("active");
+  celsTemperature.classList.add("active");
   let currentTemp = document.querySelector("#temperature");
-  currentTemp.innerHTML = 25;
+  currentTemp.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celciusTemperature = document.querySelector("#celcius-link");
-celciusTemperature.addEventListener("click", calcTemperature);
+let celsTemperature = document.querySelector("#celcius-link");
+celsTemperature.addEventListener("click", calcTemperatureCels);
 
 function calcTemperatureFahrn(event) {
   event.preventDefault();
 
+  celsTemperature.classList.remove("active");
+  fahrenheitTemperature.classList.add("active");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
   let currentTemp = document.querySelector("#temperature");
-  currentTemp.innerHTML = 77;
+  currentTemp.innerHTML = Math.round(fahrenheitTemp);
 }
 
 let fahrenheitTemperature = document.querySelector("#fahrenheit-link");

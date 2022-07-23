@@ -33,7 +33,17 @@ html {
   display: flex;
 }
 
+.temperature-box .active {
+  color: black;
+  cursor: default;
+}
+
+.temperature-box .active:hover {
+  text-decoration: none;
+}
+
 .temperature {
+  min-width: 55px;
   font-size: 40px;
   margin-right: 10px;
 }
