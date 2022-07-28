@@ -123,3 +123,31 @@ function getCurrentWeather(event) {
 
 let currentWeather = document.querySelector("#current-location-weather");
 currentWeather.addEventListener("click", getCurrentWeather);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="forecast__date">${day}</div>
+            <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" />
+            <div class="forecast__temp">
+              <span class="temp-min">12°</span>
+              <span class="temp-max">18°</span>
+            </div>
+        </div>
+        
+    `;
+  });
+  
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
