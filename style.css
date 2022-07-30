@@ -45,6 +45,11 @@ html {
   font-size: 40px;
 }
 
+.header__img {
+  display: block;
+  margin: auto;
+}
+
 .header__img img {
   padding: 0 50px;
 }
