@@ -13,7 +13,6 @@ html {
   margin: 50px auto;
   margin-bottom: 10px;
   background: #fff;
-  /* margin-top: 50px; */
   padding: 40px 20px;
   border: 1px solid #aeccc6;
   border-radius: 10px;
@@ -26,39 +25,24 @@ html {
 }
 
 .card-text {
-  font-size: 36px;
+  font-size: 48px;
+}
+
+#description {
+  opacity: 0.6;
 }
 
 .temperature-box {
   display: flex;
 }
 
-.temperature-box .active {
-  color: black;
-  cursor: default;
-}
-
-.temperature-box .active:hover {
-  text-decoration: none;
-}
-
 .temperature {
   min-width: 55px;
   font-size: 40px;
-  margin-right: 10px;
 }
 
 .units {
-  padding-top: 10px;
-}
-
-#celcius-link {
-  margin-right: 15px;
-}
-
-.units a {
-  text-decoration: none;
-  color: rgb(0, 174, 255);
+  font-size: 40px;
 }
 
 .header__img img {
@@ -88,7 +72,6 @@ html {
   display: flex;
   justify-content: center;
 }
-
 
 .forecast {
   font-size: 14px;

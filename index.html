@@ -20,17 +20,12 @@
         <section class="header">
           <div class="card" style="width: 18rem">
             <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-muted" id="current-day">
-                17 June 2022
-              </h6>
-              <p class="card-text" id="city-name">City</p>
-              <p id="description">condition</p>
+              <h6 class="card-subtitle mb-2 text-muted" id="current-day"></h6>
+              <p class="card-text" id="city-name"></p>
+              <p id="description"></p>
               <div class="temperature-box">
-                <p class="temperature" id="temperature">t</p>
-                <p class="units" id="units">
-                  <a href="#" class="active" id="celcius-link">°C</a>
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </p>
+                <p class="temperature" id="temperature"></p>
+                <span class="units">°C</span>
               </div>
             </div>
           </div>
@@ -42,9 +37,9 @@
             />
           </div>
           <div class="details">
-            <p>Feels like: <span id="feels-like"></span>°C</p>
-            <p>Humidity: <span id="humidity"></span>%</p>
-            <p>Wind: <span id="wind-speed"></span>km/h</p>
+            <p>Feels like: <span id="feels-like"></span>&nbsp°C</p>
+            <p>Humidity: <span id="humidity"></span>&nbsp%</p>
+            <p>Wind: <span id="wind-speed"></span>&nbspkm/h</p>
           </div>
         </section>
         <form class="input" id="form">
@@ -66,9 +61,7 @@
             Current
           </button>
         </form>
-        <section class="forecast" id="forecast">
-          
-        </section>
+        <section class="forecast" id="forecast"></section>
       </div>
       <footer>
         <a

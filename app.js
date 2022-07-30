@@ -97,31 +97,6 @@ function search(event) {
 let form = document.querySelector("#form");
 form.addEventListener("submit", search);
 
-function calcTemperatureCels(event) {
-  event.preventDefault();
-
-  fahrenheitTemperature.classList.remove("active");
-  celsTemperature.classList.add("active");
-  let currentTemp = document.querySelector("#temperature");
-  currentTemp.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsTemperature = document.querySelector("#celcius-link");
-celsTemperature.addEventListener("click", calcTemperatureCels);
-
-function calcTemperatureFahrn(event) {
-  event.preventDefault();
-
-  celsTemperature.classList.remove("active");
-  fahrenheitTemperature.classList.add("active");
-  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
-  let currentTemp = document.querySelector("#temperature");
-  currentTemp.innerHTML = Math.round(fahrenheitTemp);
-}
-
-let fahrenheitTemperature = document.querySelector("#fahrenheit-link");
-fahrenheitTemperature.addEventListener("click", calcTemperatureFahrn);
-
 function showResult(position) {
   getWeatherByCoordinates(position, showTemperature);
 }
@@ -171,3 +146,5 @@ function displayForecast(response) {
 
   forecastElement.innerHTML = forecastHTML;
 }
+
+getWeatherByCityName("Kyiv", showTemperature);
